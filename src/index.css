@@ -21,10 +21,19 @@
 }
 
 .navbar-footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   min-height: 60px;
+}
+
+.user-div-main {
+  min-height: 600px;
+}
+
+.repo-list {
+  height: 300px;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 376px) {
