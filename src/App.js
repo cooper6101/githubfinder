@@ -13,36 +13,35 @@ import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 
 import './App.css';
+import './index.css';
 
 const App = () => {
+  return (
+    <GithubState>
+      <AlertState>
+        <Router>
+          <div className='App'>
+            <Navbar />
 
-    return (
-      <GithubState>
-        <AlertState>
-            <Router>
-                <div className="App">
+            <div
+              className='container search-div-main'
+              style={{ minHeight: '500px' }}
+            >
+              <Alert />
 
-                <Navbar />
-
-                <div className='container' style={{ minHeight: '500px' }}>
-                  <Alert />
-
-                  <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route exact path='/about' component={About} />
-                    <Route exact path='/user/:login' component={User} />
-                    <Route component={NotFound} />
-                  </Switch>
-                </div>
-
-                </div>
-                <Footer />
-            </Router>
-        </AlertState>
-      </GithubState>
-
-    );
-
-}
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/user/:login' component={User} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
+          </div>
+          <Footer />
+        </Router>
+      </AlertState>
+    </GithubState>
+  );
+};
 
 export default App;

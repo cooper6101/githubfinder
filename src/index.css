@@ -1,0 +1,34 @@
+.search-div-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 25px auto;
+}
+
+.user-display-grid {
+  overflow: scroll;
+  margin: 35px 0;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.user-card-col {
+  width: 200px;
+  margin: 0 2px;
+}
+
+.navbar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 60px;
+}
+
+@media screen and (max-width: 376px) {
+  .user-display-grid {
+    height: 200px;
+  }
+}
